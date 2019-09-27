@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+    <span>My Application</span>
+    <span class="example-fill-remaining-space"></span>
+        Hello, Milan
+        <button mat-icon-button [matMenuTriggerFor]="appMenu">
+           
+            <mat-icon>person</mat-icon>
+          </button>
+        <mat-menu #appMenu="matMenu">
+            <button (click)="menuItemSelected('register')" mat-menu-item>Register</button>
+            <button (click)= "menuItemSelected('change')" mat-menu-item>Change Password</button>
+            <button (click) = "menuItemSelected('logout')" mat-menu-item>Logout</button>
+        </mat-menu>
+</mat-toolbar>
