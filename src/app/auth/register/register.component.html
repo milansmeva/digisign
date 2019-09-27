@@ -1,14 +1,14 @@
 <div>
-    <div class="center">
-        <h4>Register</h4>
-        <form class="form">
-            <div class="form-group">
-                <input name="username" type="text" placeholder="Username" class="form-control">
+        <div class="center">
+            <h4>Register</h4>
+            <div class="form">
+                <div class="form-group">
+                    <input required [(ngModel)]="model.username" name="username" type="text" placeholder="Username" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input required [(ngModel)]="model.password" name="password" type="password" placeholder="password" class="form-control">
+                </div>
+                <button (click)="submit()" mat-raised-button color="primary">SignIn</button>
             </div>
-            <div class="form-group">
-                <input name="password" type="password" placeholder="password" class="form-control">
-            </div>
-            <button mat-raised-button color="primary" role="submit">Register</button>
-        </form>
+        </div>
     </div>
-</div>

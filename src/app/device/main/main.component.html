@@ -1,1 +1,11 @@
-<h1>Devices</h1>
+<h4>Devices</h4>
+<hr>
+
+<div class="actions">
+    <button mat-raised-button color="primary" >Add Media Player</button>
+</div>
+
+<div class="content">
+    <app-addmedia *ngIf="action=='add'"></app-addmedia>
+    <app-list *ngIf="action!='add'"></app-list>
+</div>

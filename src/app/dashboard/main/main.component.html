@@ -1,3 +1,7 @@
 <div class="container">
-    <div id="map"></div>
+    <!-- <div id="map"></div> -->
+    <h1>Hello There</h1>
+    <agm-map [latitude]="lat" [longitude]="lng">
+        <agm-marker *ngFor = "let pin of pins" [title]="pin.label" [latitude]="pin.cords[0]" [longitude]="pin.cords[1]"></agm-marker>
+    </agm-map>
 </div>
