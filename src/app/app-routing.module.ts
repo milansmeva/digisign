@@ -10,7 +10,7 @@ const routes: Routes = [
   },
 
   {
-    path: "app",
+    path: "",
     component:ContentComponent,
     children:[{
       path: "",

@@ -14,7 +14,8 @@ let routes = [
   declarations: [MainComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    
   ]
 })
 export class DashboardModule { }
