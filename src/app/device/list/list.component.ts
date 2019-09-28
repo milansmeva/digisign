@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-list',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
+  @Input('mpList') list;
+
   constructor() { }
 
   ngOnInit() {
+
   }
+
+  
 
 }

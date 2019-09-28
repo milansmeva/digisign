@@ -1,0 +1,10 @@
+.list{
+    display: flex;
+    flex-flow: column;
+
+    .list-item {
+        padding: 12px 18px;
+        border: 1px solid rgb(214, 214, 214);
+        box-shadow: 0 5px 5px 5px rgb(128, 128, 128);
+    }
+}

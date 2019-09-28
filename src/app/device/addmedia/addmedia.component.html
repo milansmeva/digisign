@@ -1,1 +1,28 @@
-<p>addmedia works!</p>
+<div class="center">
+    <h4>Register New Device</h4>
+    <div class="form">
+        <div class="form-group">
+            <input class="form-control" [(ngModel)]="model.name" type="text" name="name" placeholder="Device Name">
+        </div>
+        <div class="form-group">
+            <input class="form-control"  type="text" [(ngModel)]="model.id"   name="id" placeholder="Device ID">
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="text" [(ngModel)]="model.password"  name="password" placeholder="Device password">
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="text" name="lat" [(ngModel)]="model.geopoint.lat"  placeholder="Lattitude">
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="text" name="lon" [(ngModel)]="model.geopoint.lon" placeholder="Longitude">
+        </div>
+
+        <br>
+        <agm-map (mapClick)="mapClick($event)">
+                <agm-marker *ngIf="isMarked"  [latitude]="model.geopoint.lat" [longitude]="model.geopoint.lon"></agm-marker>
+        </agm-map>
+        
+        <br>
+        <button mat-raised-button color="primary" (click)="submit()" >Register Device</button>
+    </div>
+</div>

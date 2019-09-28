@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MainComponent } from './main/main.component';
 import { RouterModule } from '@angular/router';
 import { AgmCoreModule } from '@agm/core';
+import { MaterialModule } from '../material/material.module';
 
 
 let routes = [
@@ -15,10 +16,7 @@ let routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBHcC0onqGkFF2h2_SgHoNibtKS_EpTbBU'
-    })
-    
+    MaterialModule
   ]
 })
 export class DashboardModule { }

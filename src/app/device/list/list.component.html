@@ -1,1 +1,7 @@
-<p>list works!</p>
+<mat-list>
+    <h3 mat-subheader>Media Players</h3>
+    <mat-list-item *ngFor="let player of list">
+        <mat-icon mat-list-icon>tv</mat-icon>
+        <h4 mat-line>{{player.name}}</h4>
+    </mat-list-item>
+</mat-list>

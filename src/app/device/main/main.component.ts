@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DeviceService } from 'src/app/shared/device.service';
+import { toTypeScript } from '@angular/compiler';
 
 @Component({
   selector: 'app-main',
@@ -9,9 +11,24 @@ export class MainComponent implements OnInit {
 
   action = null;
 
-  constructor() { }
+  mps = [];
+
+  constructor(private ds:DeviceService) { }
 
   ngOnInit() {
+    this.getMps();
+  }
+
+  onAdd(data){
+    this.action = null;
+    console.log(data);
+    this.ds.createMediaPlayer(data).subscribe(d=>{
+      console.log(d);
+    })
+  }
+
+  getMps(){
+    this.ds.getAllMediaPlayer().subscribe((d:any[])=>this.mps = d)
   }
 
 }

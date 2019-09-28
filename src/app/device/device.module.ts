@@ -4,6 +4,8 @@ import { MainComponent } from './main/main.component';
 import { RouterModule } from '@angular/router';
 import { AddmediaComponent } from './addmedia/addmedia.component';
 import { ListComponent } from './list/list.component';
+import { MaterialModule } from '../material/material.module';
+import { FormsModule } from '@angular/forms';
 
 let routes = [{
   path:"",
@@ -15,7 +17,9 @@ let routes = [{
   declarations: [MainComponent, AddmediaComponent, ListComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    MaterialModule,
+    FormsModule
   ]
 })
 export class DeviceModule { }

@@ -2,10 +2,10 @@
 <hr>
 
 <div class="actions">
-    <button mat-raised-button color="primary" >Add Media Player</button>
+    <button *ngIf="!action" (click)="action='add'" mat-raised-button color="primary" >Add Media Player</button>
 </div>
 
 <div class="content">
-    <app-addmedia *ngIf="action=='add'"></app-addmedia>
-    <app-list *ngIf="action!='add'"></app-list>
+    <app-addmedia (onAdd)="onAdd($event)" *ngIf="action=='add'"></app-addmedia>
+    <app-list [mpList]="mps" *ngIf="action!='add'"></app-list>
 </div>

@@ -28,11 +28,31 @@ $digisign-theme: mat-light-theme($digisign-primary, $digisign-accent, $digisign-
 
 /* You can add global styles to this file, and also import other style files */
 
-$white : #FFFFFF;
-$primary: #4DCBA1;
-$accent: #373c44;
-$black:  #20262d;
 
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.center{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.form{
+    display: flex;
+    flex-flow: column;
+    padding: 8px;
+    .form-group{
+        margin-bottom:18px;
+    
+        .form-control{
+            border: none;
+            padding: 12px 18px;
+            background: rgb(230, 230, 230);
+            border-radius: 5px;
+        }
+    }
+    
+}
